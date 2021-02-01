@@ -2,6 +2,7 @@ import numpy as np
 import cv2
 
 from utils.camera.video_stream import VideoStream
+from utils.visualization.signal import show_signal
 
 
 CAMERA_NUM = 0
@@ -34,7 +35,10 @@ def get_frames(stream, event_key=13):
 
 
 if __name__ == "__main__":
-    stream = VideoStream(CAMERA_NUM, FPS, FRAME_WIDTH, FRAME_HEIGHT)
-    frames = get_frames(stream, event_key=13)
-    print(np.shape(frames))
+    # stream = VideoStream(CAMERA_NUM, FPS, FRAME_WIDTH, FRAME_HEIGHT)
+    # frames = get_frames(stream, event_key=13)
+    # print(np.shape(frames))
+
+    show_signal('aaa', [1,2,3],fps_info=(1,))
+
 
